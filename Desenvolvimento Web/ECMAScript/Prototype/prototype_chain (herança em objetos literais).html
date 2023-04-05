@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        //Todos esses objetos são filhos de 'Object.prototype'
+
+        let animal = { attr1: 'a'}
+
+        //Fazendo com que vertebrado herde de 'animal'
+        let vertebrado = {
+            __proto__: animal, 
+            attr2: 'b'
+        }
+
+        //Estou fazendo com que 'ave', ao invés de por padrão apontar para o 'Object.prototype', herde de 'vertebrado',
+        //assim herdando os seus atributos
+        let ave = {__proto__: vertebrado, attr3: 'c'}
+
+        console.log(ave.attr2, ave.attr1)
+
+
+        //O atributo arrt50 não existe dentro de nenhum dos objetos literais. Porém, eu posso criá-lo dentro
+        //do 'Object.prototype', fazendo assim com que ele seja herdado por todos os objetos da aplicação
+        Object.prototype.attr50 = 'Z' //Cuidado, pois aqui estou criando um atributo global pra aplicação
+        console.log(ave.attr50)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

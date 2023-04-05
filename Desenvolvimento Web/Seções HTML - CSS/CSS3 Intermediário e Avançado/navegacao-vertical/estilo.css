@@ -1,0 +1,36 @@
+/*Barra de navegação vertical*/
+/* ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    padding: 5px 20px;
+    background: url(imgs/seta.png) no-repeat left center;
+} */
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+ul a{
+    width: 200px;
+    height: 40px;
+    display: block;
+    /*Essa cor no background serve para caso a imagem não carregue*/
+    background: #f7b600 url(imgs/menu.png);
+    color: #000;
+    text-decoration: none;
+    text-indent: 40px;
+    line-height: 40px;
+}
+
+ul a:hover{
+    background-position: right bottom;
+    /*Essa cor no background serve para caso a imagem não carregue*/
+    background-color: #f99200;
+    color: #FFF;
+}

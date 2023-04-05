@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        // No momento que o JS identificar o lançamento desse objeto, ele vai forçar uma exceção dentro do
+        // código, forçando a interrupção do script
+        // throw new Error('Houve um erro, mas estamos trabalhando nisso agora')
+
+        var video = []
+
+        video[1] = []
+        video[1]['nome'] = 'Fullmetal Alchesmit'
+        video[1]['categoria'] = 'Anime'
+
+        function getVideo(video){
+
+            try{
+                console.log(video[0]['nome'])
+            }catch(e){
+                console.log(e)
+                console.log('Agora podemos tratar o erro')
+                // throw new Error('Houve um erro, mas estamos trabalhando nisso agora')
+            }finally{
+                console.log('Sempre passa por aqui (try/catch') 
+            }
+            
+            
+            console.log('Aplicação não morreu') 
+        }
+
+        getVideo(video)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

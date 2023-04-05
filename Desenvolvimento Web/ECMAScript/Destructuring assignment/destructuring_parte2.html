@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //Destructuring no contexto de objetos
+
+        let produto = {
+            descricao: 'Notebook',
+            preco: 1800,
+            detalhes: {
+                fabricante: 'abc',
+                modelo: 'xyz'
+            }
+        }
+
+        //Supondo que eu queira extrair 'descricao' e 'preco'
+        let {descricao, preco} = produto
+        console.log(descricao, preco)
+
+        //Digamos que eu queira usar um nome de variavel diferente
+        //atributo : nomeDaVariavel
+        let {descricao: d, preco: p} = produto
+        console.log(d, p)
+
+        //Valores default para atributos inexistentes
+        let {descricao: d2, preco: p2, desconto = 5} = produto
+        console.log(d2, p2, desconto)
+
+        //Extração de atributos de um objeto pertencente a outro objeto (nesse caso os atributos do obj 'detalhes'
+        //que está dentro de 'produto')
+        let { detalhes: { fabricante, modelo} } = produto
+        console.log(fabricante, modelo)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

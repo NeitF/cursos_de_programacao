@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function acao(){
+            alert('Evento disparado')
+        }
+
+        function acao2(){
+            alert('Evento dois disparado')
+        }
+
+    </script>
+</head>
+<body>
+    <!-- Evento onclick: Acionado quando o evento é clicado -->
+    <!-- <div onclick="alert('Teste')" style="background: gray; height: 150px; width: 150px ;"> -->
+    <!-- <div onclick="acao()" style="background: gray; height: 150px; width: 150px ;"> -->
+
+    <!-- Evento ondblclick: acionado quando houver double click -->
+    <!-- <div ondblclick="acao()" style="background: gray; height: 150px; width: 150px ;"> -->
+
+    <!-- Evento onmouseup: disparado depois que eu clico sobre o elemento e solto o click  -->
+    <!-- <div onmouseup="acao()" style="background: gray; height: 150px; width: 150px ;"></div> -->
+
+    <!-- Evento onmouseover: acionado quando o cursor do mouse sobrepoe e região do elemento dentro do browser -->
+    <!-- <div onmouseover="acao()" style="background: gray; height: 150px; width: 150px ;"></div> -->
+
+    <!-- Evento oumouseout: acionado quando o cursor do mouse sai da região ocupada pelo elemento -->
+    <!-- <div onmouseout="acao()" style="background: gray; height: 150px; width: 150px ;"></div> -->
+
+    <!-- ESSE EVENTOS PODEM SER COMBINADOS -->
+    <div onclick="acao()" onmouseout="acao2()" style="background: gray; height: 150px; width: 150px ;"></div>
+
+    </div>
+</body>
+</html>

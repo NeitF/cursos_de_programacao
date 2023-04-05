@@ -1,0 +1,32 @@
+/*Barra de navageção horizontal*/
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 720px;
+    background: #159cb0 url(imgs/fundo-horizontal.png) repeat-x;
+    float: left;
+}
+
+ul li{
+    float: left;
+}
+
+ul a{
+    display: block;
+    padding: 0 2em;
+    line-height: 2em;
+    text-decoration: none;
+    color: #FFF;
+    background: url(imgs/divisor.png) repeat-y;
+}
+
+ul a:hover{
+    color: #085662;
+    background: #44cade;
+}
+
+/*Irá tirar o background divisor do primeiro item do menu (nesse caso, o 'Home')*/
+ul .primeiro a{
+    background: none;
+}

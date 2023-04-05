@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        //As informações recuparados a partir de availHeight e availWidth representam valores
+        //potenciais, ou seja, mostram até qual altura e qual largura o navigator pode ser expandido.
+        //Eles não necessariamente informam a altura e largura que o browser está ocupando naquele
+        //momento.
+        var altura = window.screen.availHeight
+        var largura = window.screen.availWidth
+
+        // document.write('Altura do navegador é: ' + altura)
+        // document.write('<br>Largura do navegador é: ' + largura)
+        if(largura < 500){
+            document.write('Lógica para impressão do menu versão mobile')
+        }else{
+            document.write('Lógica para impressão do menu versão web')
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

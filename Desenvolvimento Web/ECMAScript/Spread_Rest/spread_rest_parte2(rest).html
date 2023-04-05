@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        //No contexto Rest nós juntamos os dados
+
+        //[Explicação parte 2] 
+        //'...param' vai receber todos os parâmetros passados na chamada da função e juntá-los em uma estrutura
+        //de array, e assim podemos percorrer os índices desse array de forma dinâmica
+        function soma(...param){
+            let resultado = 0
+
+            //Vai printar um array com os valores passados por parâmetro na chamada da função
+            console.log(param)
+
+            param.forEach(v => resultado += v)
+
+            return resultado
+        }
+
+        //[Explicação parte 1] 
+        //Como eu posso recuperar esses parâmetros dentro da função e atuar sobre cada um deles de forma 
+        //dinâmica? Simples, utilizando o operador 'Rest'
+
+        console.log(soma(3, 8, 5, 7))
+
+        //-----------------------------------
+        //Segundo exemplo
+
+        //O primeiro parâmetro ('m') vai ser um único valor, mas o segundo parâmetro ('p') eu não sei quantos
+        //valores eu posso receber. Para isso vou usar Rest
+        function multiplicacao(m, ...p){
+            console.log(m)
+            console.log(p)
+
+            let resultado = 0
+
+            p.forEach(v => resultado += m * v)
+            return(resultado)
+        }
+
+        //O que eu estou falando aqui é que o primeiro parâmetro passado ('5') vai ser recebido como o primeiro
+        //parâmetro da função ('m'), enquantos os demais parâmetros serão recebidos e unificados em um único
+        //parâmetro, que será um array graças ao Rest 
+        console.log(multiplicacao(5, 7, 12, 3, 49))
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

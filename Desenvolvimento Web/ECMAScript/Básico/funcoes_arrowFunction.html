@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        //Função anônima tradicional
+        let quadrado = function(x){
+            return x * x
+        }
+
+        document.write(quadrado(3))
+
+        //Arrow Function
+        let quadradoArrow = (x) => {
+            return x * x
+        }
+
+        //Se eu estiver recebendo apenas um único parâmetro (nesse caso o 'x', eu não preciso abrir e fechar parenteses)
+        // let quadradoArrow = x => {
+        //     return x * x
+        // }
+
+        //Se eu não estiver recebendo parâmetros, preciso dos parênteses
+        // let quadradoArrow = () => {
+        //     return x * x
+        // }
+
+        //Se eu tiver dois parâmetros, preciso dos parenteses
+        // let quadradoArrow = (x, y) => {
+        //     return x * y
+        // }
+
+        //Quando só tenho uma instrução, não preciso do bloco de código e nem do return
+        // let quadradoArrow = () => x * x
+        
+        /*
+        let parOuImpar = function(numero){
+            if(numero % 2 === 0)
+                return 'par'
+            else
+                return 'impar'
+            }
+        */
+
+        let parOuImpar = numero => numero % 2 === 0 ? 'par' : 'impar'
+           
+        document.write(quadradoArrow(3))
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

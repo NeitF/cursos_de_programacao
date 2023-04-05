@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        //OBS: O forEach só atua sobre índice numéricos
+        
+        var listaFuncionarios = ['Viviane', 'Rosângela', 'Miguel', 'Lucas', 'Fernanda']
+        var listaFuncionarios2 = ['Viviane', 'Rosângela', 'Miguel', 'Lucas', 'Fernanda']
+
+        var f = function(valor, indice){
+            console.log(valor)
+            console.log(indice)
+        }
+
+        //Quando encaminhamos uma função de callback para outra função, a função é executada 
+        //dentro do contexto da outra função, recebendo portanto parâmetros que são encaminhados para essa
+        //função de callback a partir de funções internas a qual estamos encaminhando o nosso callback (nesse
+        //caso o 'forEach'). Ou seja, toda a complexidade fica encapsulada
+
+        listaFuncionarios.forEach(function(valor, indice, array){
+            console.log('indice: ' + indice)
+            console.log('valor: ' + valor)
+            // console.log(array)
+
+            if(valor == 'Lucas'){
+                array[indice] = 'Um novo valor'
+            }
+        })
+
+        listaFuncionarios2.forEach(f)
+
+
+        // listaFuncionarios2.forEach(function(valor){
+        //     console.log(valor)
+        // })
+
+        console.log(listaFuncionarios)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

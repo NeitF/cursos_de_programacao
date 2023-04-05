@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //Podemos passar uma quantidade indefinida de parâmetro, e lidar com essa quantidade
+        function soma(){
+            // ARGUMENTS: é uma instrução que existe pra todas as funções javascript, que retorna algo
+            // muito parecido com um array, contendo a relação da parâmetro passados pra função. Essa palavra
+            // 'arguments' representa um objeto que é uma variável local disponível dentro da função. Então 
+            // qualquer função, nós podemos recuperar os parâmetros passados para aquela função através do
+            // objeto 'arguments'
+            // console.log(arguments)
+            var resultado = 0
+            for(var i in arguments){
+                console.log(arguments[i])
+                resultado += arguments[i]
+            }
+
+            return resultado
+        }
+
+        console.log(soma(7, 5, 3.2, 0.8))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

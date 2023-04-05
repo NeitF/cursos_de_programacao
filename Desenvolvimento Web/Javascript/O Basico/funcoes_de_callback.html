@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function exibirArtigo(id, callbackSucesso, callbackErro){
+            //Lógica: recuperar o id via requisição http
+            if(true){
+                callbackSucesso('Funcoes de callback em JS', 'funcoes de callback sao muito utilizadas...')
+            }else{
+                callbackErro('Erro ao recuperar os dados')
+            }
+        }
+
+        var callbackSucesso = function(titulo, descricao){
+            document.write('<h1>' + titulo + '</h1>')
+            document.write('<hr />')
+            document.write('<p>' + descricao + '</p>')
+        }
+
+        var callbackErro = function(erro){
+            document.write('<p><b>Erro</b>' + erro + '</p>')
+        }
+
+
+        //NOTA IMPORTANTE: Perceba que quando estou passando 'callbackSucesso' e 'callbackErro' como parâmetros,
+        // eu não estou colocando os parênteses. Isso porque, caso eu escreva por exemplo assim: callbackErro(), 
+        // o interpretador vai entender que deve executar aquela função no momento em que ela for passada como
+        // parâmetro, para que aí sim o valor que ela retornar seja passado como parâmetro. Aqui, eu estou 
+        // encaminhando apenas a referência da função como parâmetro
+        exibirArtigo(1, callbackSucesso, callbackErro)
+
+        // Eu também posso passar as funções como parâmetro dessa forma, criando o seu escopo
+        // no momento de chamar o método 'exibirArtigo'
+        // exibirArtigo(1, function(){...}, function(){...})
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

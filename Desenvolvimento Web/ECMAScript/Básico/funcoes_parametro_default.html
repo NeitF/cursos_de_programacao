@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        //Estou atribuindo valores default para os parâmetros. Se no momento em que eu chamar o método eu
+        //não passar nenhum parâmetro, o valor assumido serão esses definidos abaixo
+        function contarUmaHistoria(personagem = 'Fubá', atividade = 'Corer no parque', nome_dono = 'João'){
+            document.write(`Era uma vez um cachorror chamado ${personagem}, ele adorava ${atividade}, seu dono era o ${nome_dono} `)
+        }
+
+        contarUmaHistoria()
+        
+        //Nada impede que eu continue passando os parâmetros
+        contarUmaHistoria('Repolho', 'Enterrar ossos', 'Pedro')
+
+        //Passando o valor como undefined, no caso abaixo, o javascript terá a inteligência de entender
+        //que vc deseja que o valor default definido na função seja assumido (no caso, o valor default para
+        //o personagem é 'Fubá')
+        contarUmaHistoria(undefined, 'Enterrar ossos', 'Pedro')
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

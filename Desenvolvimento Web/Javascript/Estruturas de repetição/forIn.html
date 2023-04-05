@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        var listaConvidados = ['Jorge', 'Jamilton', 'José', 'Ana', 'Maria']
+
+        //A cada iteraçãao, a vaariável X vai receber o valor do índice de cada uma das posições do array.
+        //ELE NÃO RECUPERA O VALOR CONTIDO NO ÍNDICE, MAS SIM A CHAVE PROPRIAMENTE DITA
+        //Vai percorrer todo o array
+        for(var x in listaConvidados){
+            console.log('índice: ' + x)
+            console.log('Valor: ' + listaConvidados[x])
+        }
+
+
+        //Tbm funciona com objetos
+        const pessoa = {
+            nome: 'Nathan',
+            sobrenome: 'Silva'
+        }
+
+        for(let chave in pessoa){
+            console.log(chave, pessoa[chave])
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

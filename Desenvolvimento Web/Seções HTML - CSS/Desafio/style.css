@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(205, 183, 146);
+    background-image: url('imgs/fundo.png');
+    width: 900px;
+    border: 1px solid red;
+}
+
+.b{
+    border: 1px solid red;
+}
+
+#nav{
+    background-color: rgb(132, 119, 83);
+    padding: 12px;
+}
+
+#conteudo{
+    background-color: rgb(216, 169, 119);
+    padding: 10px;
+}
+
+a{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    color: rgba(38, 73, 188, 0.594);
+    padding: 10px;
+}
+
+h3{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(255, 219, 164);
+    font-size: 1.2em;
+}

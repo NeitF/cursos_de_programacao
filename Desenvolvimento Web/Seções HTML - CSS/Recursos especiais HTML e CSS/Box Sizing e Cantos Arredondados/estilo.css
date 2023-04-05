@@ -1,0 +1,43 @@
+/* BORDER RADIUS*/
+#caixa{
+    width: 300px;
+    height: 300px;
+    background: #b9c941;
+    padding: 10px;
+    margin: 10px;
+    /* border-radius: 150px; */
+    /* border-radius: 10px 50px 80px 100px; */
+
+    /*20px no canto superior esquerdo e canto inferior direito, 90 px no canto superior direito e canto inferior
+    esquedo*/
+    /*OBS: Alguns browsers não suportam o Border-Radius, portanto precisamos usar prefixos para que eles
+    funcionem corretamente, sendo esses prefixos o: webkit e -moz-*/
+    -webkit-border-radius: 20px 90px;
+    -moz-border-radius: 20px 90px;
+    border-radius: 20px 90px;
+}
+
+/* .arredondamento{
+    border-radius: 150px;
+} */
+
+
+/*Box Sizing*/
+#caixa2{
+    width: 300px;
+    height: 300px;
+    background: #b9c941;
+    padding: 50px;
+    /*Faz a caixa perder o comportamento de que a altura e a largura vão ser acrescidas do padding.
+    Agr, independente do meu padding, a caixa sempre terá 300px*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#caixa3{
+    width: 300px;
+    height: 300px;
+    background: #b9c941;
+
+}

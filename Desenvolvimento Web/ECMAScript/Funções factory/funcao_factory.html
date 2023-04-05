@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        //Preciso repetir as mesmas linhas de código para criar outro objeto
+        let Bicicleta1 = {
+            cor: 'Branca',
+            marcha: 'Única',
+            aro: 12,
+            pedalar() { console.log('Método pedalar executado') }
+        }
+
+        let Bicicleta2 = {
+            cor: 'Vermelha',
+            marcha: '18',
+            aro: 12,
+            pedalar() { console.log('Método pedalar executado') }
+        }
+
+        console.log(Bicicleta1)
+        console.log(Bicicleta2)
+
+        //----------------------------------------------------
+        //Funções Factory visam automarizar o processo hard code realizado acima
+        let BicicletaFactory = function(cor, marcha, aro){
+            return {
+                cor,
+                marcha,
+                aro,
+                pedalar() { console.log('Método pedalar executado') }
+            }
+        }
+
+        let Bicicleta3 = BicicletaFactory('Vermelha', '18', 26)
+        console.log(Bicicleta3)
+
+        let Bicicleta4 = BicicletaFactory('Preta', '21', 29)
+        console.log(Bicicleta4)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

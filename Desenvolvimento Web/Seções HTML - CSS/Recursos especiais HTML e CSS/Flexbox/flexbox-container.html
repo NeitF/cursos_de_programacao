@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox itens parte 1</title>
+
+    <style type="text/css">
+
+        #conteudo{
+            background: #dcdcdc;
+            height: 400px;
+            display: flex;
+
+            /**
+            VALORES DO FLEX DIRECTION   
+            row | row-reverse | column | column-reverse
+            */
+
+            flex-direction: row;
+
+            /**
+            VALORES DO FLEX WRAP (quebras de layout)
+            nowrap | wrap | wrap-reverse
+            */
+
+            flex-wrap: nowrap;
+
+            /**
+            VALORES DO JUSTIFY CONTENT (alinha os itens na horizontal)
+            flex-start | flex-end | center | space-between | space-around
+            */
+
+            justify-content: space-around;
+
+            /**
+            VALORES DO ALIGN ITENS (alinha os itens na vertical)
+            stretch | center | flex-start | flex-end | baselinne
+            */
+
+            align-items: baseline;
+
+        }
+
+        .item{
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            background: white;
+            border: 1px solid gray;
+        }   
+
+    </style>
+</head>
+<body>
+    
+    <h1>Flexbox</h1>
+    <!-- Este 'conteúdo' nós chamamos de 'container', pois ele contém esses outros itens. Quando você utiliza
+    a propriedade Flexbox vc passa a ter um container e dentro dele temos os flex itens. -->
+    <div id="conteudo">
+        <div class="item">01</div>
+        <div class="item">02</div>
+        <div class="item">03</div>
+        <div class="item">04</div>
+    </div>
+
+</body>
+</html>

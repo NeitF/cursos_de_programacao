@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        var data = new Date()
+
+        //Recupera dia
+        document.write(data.getDate())
+
+        //Recupera mes (considera os meses de 0 a 11)
+        document.write(data.getMonth() + 1)
+
+        // Recupera ano
+        document.write(data.getFullYear)
+
+
+        //Adicionar ou remover dias da data
+        document.write(data.toString())
+        //O date atua sobre os meses e anos tbm. Portanto se eu adicionar 720 dias, o mês e o ano 
+        // tbm serão alterados
+        data.setDate(data.getDate + 1)
+        document.write('<hr/>')
+        document.write(data.toString())
+        document.write('<br /><br /><hr/>')
+
+        //Adicionar ou remover meses da data
+        document.write(data.toString())
+        data.setMonth(data.getMonth - 1)
+        document.write('<hr/>')
+        document.write(data.toString())
+        document.write('<br /><br /><hr/>')
+
+        //Adicionar ou remover anos da data
+        document.write(data.toString())
+        data.setFullYear(data.getFullYear - 1)
+        document.write('<hr/>')
+        document.write(data.toString())
+        document.write('<br /><br /><hr/>')
+
+
+        //CALCULAR DUAS DATAS DIFERENTES
+        // Terei duas datas: 15/01/2023
+        //                   23/02/2023
+        // A pergunta é: quantos dias existem entre essas duas datas?  
+
+        var data1 = new Date(2023, 0, 15);
+        var data2 = new Date(2023, 1, 23);
+
+        document.write(data.toString())
+        document.write('<hr />')
+        document.write(data.toString())
+
+        document.write('<br /><br /><hr/>')
+
+        //Converter datas para algo que possamos calcular
+        document.write(data.getTime())
+        document.write('<hr />')
+        document.write(data.getTime())
+
+        // O método 'getTime' recupera a quantidade de milisegundos que existe entre as datas de 
+        // 01/01/1970 até a data em que estão
+
+        document.write('<br /><br /><hr/>')
+        // encontra a quantidade de milisegundos entre data1 e data2
+        var milisegundos_entre_datas = Math.abs(data1.getTime()) - data2.getTime()
+        document.write(milisegundos_entre_datas)
+
+        //descobrir quantos dias essa quantidade de milisegundos representa
+        //1 dia tem 24, cada hora tem 60 min, cada min de 60 seg e cada seg tem 1000 miliseg
+        //então quantos milisegundos existem em um dia?
+        var milisegundos_por_dia = 1*24*60*60*1000
+        document.write('1 dia tem: ' + milisegundos + ' milisegundos')
+       
+        document.write('<br /><br /><hr/>')
+        document.write('A diferença entre data1 e data2 é : ' + Math.ceil(milisegundos_entre_datas 
+        / milisegundos_por_dia))
+        
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

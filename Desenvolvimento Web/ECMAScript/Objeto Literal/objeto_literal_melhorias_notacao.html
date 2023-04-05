@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        let nome = 'Jorge'
+        let idade = 29
+        let sexo = 'Masculino'
+        let profissao = 'Programador'
+
+        //Maneira tradicional de criar um objeto literal
+        let objeto = {
+            nome: nome,
+            idade: idade,
+            sexo: sexo,
+            profissao: profissao,
+            exibirResumo: function(){
+                console.log(`${this.nome}, ${this.idade} anos, ${this.sexo} é ${this.profissao}`)
+            }
+        }
+
+        console.log(objeto)
+        objeto.exibirResumo
+
+
+        //Maneira melhorada de criar um objeto literal
+        //Na situção deste exemplo, a chave possui o mesmo nome do valor (o nome da chave é 'nome', e o nome
+        //da variável valor também é nome). Em casos assim, podemos omitir a chave, deixando apenas a variável.
+        //O js vai entender o nome nome chave/valor será o nome da variável
+        let objeto2 = {
+            nome,
+            idade,
+            sexo,
+            profissao,
+            exibirResumo(){
+                console.log(`${this.nome}, ${this.idade} anos, ${this.sexo} é ${this.profissao}`)
+            }
+        }
+
+        console.log(objeto2)
+        objeto2.exibirResumo
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

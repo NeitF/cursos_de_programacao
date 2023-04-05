@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+
+    <script>
+
+        function foco(){
+            document.getElementById('campo').style.background = 'yellow'
+        }
+
+        function semFoco(){
+            var conteudo = document.getElementById('campo').value
+            if(conteudo.length < 3)
+                document.getElementById('campo').style.background = 'red'
+            else    
+                document.getElementById('campo').style.background = 'green'
+                
+           
+        }
+    </script>
+</head>
+<body>
+    
+    <h3>Campo input</h3>
+    <input type="text" id="campo" onfocus="foco()" onblur="semFoco()">
+    
+</body>
+</html>

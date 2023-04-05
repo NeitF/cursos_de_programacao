@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        //Contexto Spread (espalhar estruturas de dados)
+
+        //string
+        let tituloArtigo = 'Como utilizar o operador rest/spread'
+
+        console.log(tituloArtigo)
+
+        //Aqui estou dando Spread na string. Cada caracter da string vai ser impresso de forma individual
+        console.log(...tituloArtigo)
+
+        //Aqui estou espalhando a String dentro de um array. Cada índice do array conterá um caracter
+        console.log([...tituloArtigo])
+
+        //----------------------------------
+        //Espalhar arrays dentro de arrays
+        let listaCursos1 = ['NodeJS e MongoDB', 'ES6, TypeScript e Angular 4']
+        let listaCursos2 = ['Multiplataforma Android/IOS', 'Introdução ao GNU/Linux']
+        
+        //Espalhando 'listaCursos1' e 'listaCursos2' dentro do array 'listaCursosCompleto'. Ele vai pegar os valores
+        //desses dois arrays (listaCursos1 e listaCursos2) e espalhar dentro de 'listaCursosCompleto'
+        let listaCursosCompleto = ['Web Completo', 'Android Completo', ...listaCursos1, ...listaCursos2]
+        
+        console.log(listaCursosCompleto)
+        
+        //----------------------------------
+        //Operador Spread no contexto de objetos
+        let pessoa = { nome: 'João', idade: 27}
+
+        //Estou pegando todos os atributos contidos em 'pessoa' e espalhando eles em 'clone'. Seria como 
+        //pegar os atributos de 'pessoa' e criá-los dentro de 'clone'
+        let clone = { endereco: 'Rua Abc', ...pessoa}
+        console.log(clone)
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        //destructuring - ele é um operador de desestruturação, basicamente ele tira valores de dentro
+        //de uma estrutura. Essa estrutura por sua vez pode ser um array ou um objeto.
+
+        //UTILIZANDO NO CONTEXTO DE ARRAYS
+        let frutas = ['Abacaxi', 'Uva', 'Pera', 'Mamão']
+
+        //EXTRAÇÃO NORMAL
+        //Perceba que a extração dos itens do array pode se tornar complicada quanto mais itens eu desejar 
+        //extrair. É aí que entra o recurso de desestruturação
+        // let a = frutas[0]
+        // let b = frutas[1]
+        // let c = frutas[2]
+
+        //EXTRAÇÃO COM DESTRUCTURING
+        //No primeiro colchete (logo após a palavra 'let') eu declaro as variáveis para as quais eu desejo
+        //que a armazenem os valores extraídos do array (Variável 'a' recebe conteúdo do índice [0], variável
+        //'b' recebe conteúdo do índice [1]...)
+
+        //Supondo que eu queira pular a 'peira' e pegar apenas o mamão. Basta eu passar uma instrução vazia
+        //e criar a variável que receberá 'mamão' (nesse caso, a variável 'd')
+        let [a, b, , d] = frutas
+
+        console.log(a, b, d)
+
+        //Definindo um valor default caso o retorno seja undefined (no caso, não existe um elemento no vetor
+        //que possa ser armazenado em 'ee')
+        let [aa, bb, cc, dd, ee = 'Banana'] = frutas
+        console.log(aa, bb, cc, dd, ee)
+
+
+        //Extração de array multidimensional
+        let coisas = [['Abacaxi', 'Uva', 'Pera', 'Mamão'], ['José', 'Maria']]
+        let [, [, n2]] = coisas
+        let [[, , p]] = coisas
+        console.log(n2)
+        console.log(p)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

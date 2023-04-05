@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        
+        let pessoa = {
+            nome: 'Maria',
+            idade: 25
+        }
+
+        console.log(pessoa)
+
+        //---------------------
+        //Supondo que durante o processamento do script, exista algum tipo de lógica que faça a inclusão de
+        //um novo atributo dentro do objeto. Supondo que eu queira incluiro o atributo 'sexo', basta fazer 
+        //o que está abaixo:
+        pessoa.sexo = 'Feminino'
+
+        console.log(pessoa)
+
+        //A mesma ideia de inclusão vale para funções
+        pessoa.dizerOi = () => console.log('Olá, tudo bem?')
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

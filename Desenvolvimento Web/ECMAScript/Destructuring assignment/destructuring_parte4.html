@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        //Utilizando destructuring com Rest
+
+        //array
+        //Vamos supor que eu queira extrair o valor 10 e os demais valores, porém todos esses demais valores
+        //extraídos em uma única variável. Para fazer isso eu posso juntar esses valores dentro de uma única 
+        //variável no momento em que for feito o destructuring do array
+        let arr = [10, 20, 30, 40]
+
+        let [a, ...resto] = arr
+
+        //A variável 'a' contará '10'
+        console.log(a)
+        //A variável 'resto' contará [20, 30, 40]
+        console.log(resto)
+
+        //Objetos
+        let obj = {
+            a: 10, b: 20, c: 30, d: 40
+        }
+
+        let {a2, ...z} = obj
+
+        //A variável 'a2' conterá '10'
+        console.log(a2)
+        //A variável 'z' conterá {20, 30, 40} (eles estão unificados dentro de um mesmo obj)
+        console.log(z)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
