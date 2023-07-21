@@ -1,90 +1,144 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.11.4 on win32)" generated="20230717 21:57:18.095" rpa="false" schemaversion="4">
-<suite id="s1" name="7-Bdd" source="c:\Users\nafs2\Documents\Git\Robot\7-bdd.robot">
-<test id="s1-t1" name="Cenario 1: Executar video no youtube" line="35">
-<kw name="Dado que eu acesso o site do youtube">
+<robot generator="Robot 6.1 (Python 3.11.4 on win32)" generated="20230720 11:38:47.278" rpa="false" schemaversion="4">
+<suite id="s1" name="Suitets" source="c:\Users\nathan.silva\OneDrive - Becomex\Documentos\Git\cursos_de_programacao\Robot\suitets">
+<suite id="s1-s1" name="T1" source="c:\Users\nathan.silva\OneDrive - Becomex\Documentos\Git\cursos_de_programacao\Robot\suitets\t1.robot">
+<test id="s1-s1-t1" name="Case 1: Teste de inputs" line="58">
+<kw name="Dado o site de testes">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<arg>${Browser}</arg>
+<arg>https://itera-qa.azurewebsites.net/home/automation</arg>
+<arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230717 21:57:18.349" level="INFO">Opening browser 'chrome' to base url 'https://www.youtube.com'.</msg>
-<status status="PASS" starttime="20230717 21:57:18.349" endtime="20230717 21:57:22.785"/>
+<msg timestamp="20230720 11:38:48.153" level="INFO">Opening browser 'chrome' to base url 'https://itera-qa.azurewebsites.net/home/automation'.</msg>
+<status status="PASS" starttime="20230720 11:38:48.152" endtime="20230720 11:38:53.817"/>
 </kw>
-<status status="PASS" starttime="20230717 21:57:18.348" endtime="20230717 21:57:22.785"/>
+<status status="PASS" starttime="20230720 11:38:48.151" endtime="20230720 11:38:53.818"/>
 </kw>
-<kw name="Quando digito o nome da música">
+<kw name="Quando preencho os campos">
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${Input_Pesquisa}</arg>
-<arg>${NomeDaMusica}</arg>
+<arg>${input_name}</arg>
+<arg>Nome</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230717 21:57:22.788" level="INFO">Typing text 'Ariana Grande Positions' into text field '//input[@id="search"]'.</msg>
-<status status="PASS" starttime="20230717 21:57:22.787" endtime="20230717 21:57:23.471"/>
+<msg timestamp="20230720 11:38:53.855" level="INFO">Typing text 'Nome' into text field '//input[@id="name"]'.</msg>
+<status status="PASS" starttime="20230720 11:38:53.827" endtime="20230720 11:38:54.078"/>
 </kw>
-<status status="PASS" starttime="20230717 21:57:22.786" endtime="20230717 21:57:23.472"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_phone}</arg>
+<arg>Telefone</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230720 11:38:54.080" level="INFO">Typing text 'Telefone' into text field '//input[@id="phone"]'.</msg>
+<status status="PASS" starttime="20230720 11:38:54.079" endtime="20230720 11:38:54.329"/>
 </kw>
-<kw name="E clico no botão buscar">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_email}</arg>
+<arg>email@email.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230720 11:38:54.331" level="INFO">Typing text 'email@email.com' into text field '//input[@id="email"]'.</msg>
+<status status="PASS" starttime="20230720 11:38:54.329" endtime="20230720 11:38:54.838"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<arg>minha_senha</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230720 11:38:54.840" level="INFO">Typing text 'minha_senha' into text field '//input[@id="password"]'.</msg>
+<status status="PASS" starttime="20230720 11:38:54.839" endtime="20230720 11:38:55.022"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${textarea_address}</arg>
+<arg>meu_endereço</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230720 11:38:55.023" level="INFO">Typing text 'meu_endereço' into text field '//textarea[@id="address"]'.</msg>
+<status status="PASS" starttime="20230720 11:38:55.022" endtime="20230720 11:38:55.200"/>
+</kw>
+<status status="PASS" starttime="20230720 11:38:53.825" endtime="20230720 11:38:55.201"/>
+</kw>
+<kw name="Então clico em submit">
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${Button_pesquisa}</arg>
+<arg>${btn_submit}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230717 21:57:23.473" level="INFO">Clicking element '//button[@id="search-icon-legacy"]'.</msg>
-<status status="PASS" starttime="20230717 21:57:23.473" endtime="20230717 21:57:23.694"/>
+<msg timestamp="20230720 11:38:55.205" level="INFO">Clicking element ''.</msg>
+<status status="PASS" starttime="20230720 11:38:55.204" endtime="20230720 11:38:55.327"/>
 </kw>
-<status status="PASS" starttime="20230717 21:57:23.472" endtime="20230717 21:57:23.694"/>
+<status status="PASS" starttime="20230720 11:38:55.203" endtime="20230720 11:38:55.328"/>
 </kw>
-<kw name="E clico na primeira opção da lista">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Primeiro}</arg>
-<arg>5</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230717 21:57:23.695" endtime="20230717 21:57:25.321"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Primeiro}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230717 21:57:25.322" level="INFO">Clicking element '(//yt-formatted-string[@class="style-scope ytd-video-renderer"])[1]'.</msg>
-<status status="PASS" starttime="20230717 21:57:25.322" endtime="20230717 21:57:25.499"/>
-</kw>
-<status status="PASS" starttime="20230717 21:57:23.694" endtime="20230717 21:57:25.500"/>
-</kw>
-<kw name="Então o vídeo é executado">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Prova}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230717 21:57:25.501" endtime="20230717 21:57:30.215"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${Prova}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230717 21:57:30.255" level="INFO">Element '//div[contains(text(), "Ordenar por")]' is displayed.</msg>
-<status status="PASS" starttime="20230717 21:57:30.216" endtime="20230717 21:57:30.255"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230717 21:57:31.257" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20230717 21:57:30.255" endtime="20230717 21:57:31.257"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230717 21:57:31.257" endtime="20230717 21:57:33.440"/>
-</kw>
-<status status="PASS" starttime="20230717 21:57:25.500" endtime="20230717 21:57:33.440"/>
-</kw>
-<status status="PASS" starttime="20230717 21:57:18.347" endtime="20230717 21:57:33.441"/>
+<status status="PASS" starttime="20230720 11:38:48.149" endtime="20230720 11:38:55.329"/>
 </test>
-<status status="PASS" starttime="20230717 21:57:18.101" endtime="20230717 21:57:33.443"/>
+<test id="s1-s1-t2" name="Case 2: Teste de Radio e Checkbox" line="63">
+<kw name="E seleciono um radio">
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>${radio_group}</arg>
+<arg>option2</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20230720 11:38:55.334" level="INFO">Selecting 'option2' from radio button 'optionsRadios'.</msg>
+<status status="PASS" starttime="20230720 11:38:55.333" endtime="20230720 11:38:55.468"/>
+</kw>
+<status status="PASS" starttime="20230720 11:38:55.333" endtime="20230720 11:38:55.468"/>
+</kw>
+<kw name="E seleciono um checkbox">
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>${checkbox_monday}</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20230720 11:38:55.471" level="INFO">Selecting checkbox '//input[@id="monday"]'.</msg>
+<status status="PASS" starttime="20230720 11:38:55.470" endtime="20230720 11:38:55.633"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>${checkbox_sunday}</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20230720 11:38:55.635" level="INFO">Selecting checkbox '//input[@id="sunday"]'.</msg>
+<status status="PASS" starttime="20230720 11:38:55.634" endtime="20230720 11:38:55.756"/>
+</kw>
+<kw name="Unselect Checkbox" library="SeleniumLibrary">
+<arg>${checkbox_monday}</arg>
+<doc>Removes the selection of checkbox identified by ``locator``.</doc>
+<msg timestamp="20230720 11:38:55.758" level="INFO">Unselecting checkbox '//input[@id="monday"]'.</msg>
+<status status="PASS" starttime="20230720 11:38:55.757" endtime="20230720 11:38:55.870"/>
+</kw>
+<status status="PASS" starttime="20230720 11:38:55.469" endtime="20230720 11:38:55.870"/>
+</kw>
+<status status="PASS" starttime="20230720 11:38:55.331" endtime="20230720 11:38:55.872"/>
+</test>
+<test id="s1-s1-t3" name="Case 3:" line="67">
+<kw name="E clico no dropdown">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${dropdwon}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230720 11:38:55.881" level="INFO">Clicking element '//select[@class="custom-select"]'.</msg>
+<status status="PASS" starttime="20230720 11:38:55.880" endtime="20230720 11:38:56.164"/>
+</kw>
+<status status="PASS" starttime="20230720 11:38:55.879" endtime="20230720 11:38:56.164"/>
+</kw>
+<kw name="E clico em uma opcao">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${dropdwon_opcao}</arg>
+<arg>0.5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230720 11:38:56.166" endtime="20230720 11:38:56.238"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${dropdwon_opcao}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230720 11:38:56.239" level="INFO">Clicking element '//option[@value="5"]'.</msg>
+<status status="PASS" starttime="20230720 11:38:56.238" endtime="20230720 11:38:56.315"/>
+</kw>
+<status status="PASS" starttime="20230720 11:38:56.165" endtime="20230720 11:38:56.316"/>
+</kw>
+<status status="PASS" starttime="20230720 11:38:55.878" endtime="20230720 11:38:56.317"/>
+</test>
+<status status="PASS" starttime="20230720 11:38:47.493" endtime="20230720 11:38:56.321"/>
+</suite>
+<status status="PASS" starttime="20230720 11:38:47.339" endtime="20230720 11:38:56.328"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="7-Bdd">7-Bdd</stat>
+<stat pass="3" fail="0" skip="0" id="s1" name="Suitets">Suitets</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1" name="T1">Suitets.T1</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20230720 11:38:48.138" level="ERROR">Error in file 'c:\Users\nathan.silva\OneDrive - Becomex\Documentos\Git\cursos_de_programacao\Robot\suitets\t1.robot' on line 3: Error in file 'c:\Users\nathan.silva\OneDrive - Becomex\Documentos\Git\cursos_de_programacao\Robot\5-checkboxRadio.robot' on line 23: Resource file with 'Test Cases' section is invalid.</msg>
 </errors>
 </robot>
