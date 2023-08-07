@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20230807 14:00:25.219" rpa="false" schemaversion="4">
+<suite id="s1" name="T1" source="C:\Users\nafs2\Documents\Git\cursos_de_programacao\Robot\SuiteTs\t1.robot">
+<test id="s1-t1" name="Case 1: Teste de inputs" line="58">
+<kw name="Dado o site de testes">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://itera-qa.azurewebsites.net/home/automation</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230807 14:00:25.529" level="INFO">Opening browser 'chrome' to base url 'https://itera-qa.azurewebsites.net/home/automation'.</msg>
+<status status="PASS" starttime="20230807 14:00:25.529" endtime="20230807 14:00:27.656"/>
+</kw>
+<status status="PASS" starttime="20230807 14:00:25.529" endtime="20230807 14:00:27.656"/>
+</kw>
+<kw name="Quando preencho os campos">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_name}</arg>
+<arg>Nome</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230807 14:00:27.658" level="INFO">Typing text 'Nome' into text field '//input[@id="name"]'.</msg>
+<msg timestamp="20230807 14:00:27.801" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230807 14:00:27.802" level="FAIL">Element with locator '//input[@id="name"]' not found.</msg>
+<status status="FAIL" starttime="20230807 14:00:27.657" endtime="20230807 14:00:27.804"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_phone}</arg>
+<arg>Telefone</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230807 14:00:27.804" endtime="20230807 14:00:27.804"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_email}</arg>
+<arg>email@email.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230807 14:00:27.804" endtime="20230807 14:00:27.804"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<arg>minha_senha</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230807 14:00:27.804" endtime="20230807 14:00:27.804"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${textarea_address}</arg>
+<arg>meu_endereço</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230807 14:00:27.805" endtime="20230807 14:00:27.805"/>
+</kw>
+<status status="FAIL" starttime="20230807 14:00:27.657" endtime="20230807 14:00:27.805"/>
+</kw>
+<kw name="Então clico em submit">
+<status status="NOT RUN" starttime="20230807 14:00:27.805" endtime="20230807 14:00:27.805"/>
+</kw>
+<status status="FAIL" starttime="20230807 14:00:25.528" endtime="20230807 14:00:27.805">Element with locator '//input[@id="name"]' not found.</status>
+</test>
+<test id="s1-t2" name="Case 2: Teste de Radio e Checkbox" line="63">
+<kw name="E seleciono um radio">
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>${radio_group}</arg>
+<arg>option2</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20230807 14:00:27.808" level="INFO">Selecting 'option2' from radio button 'optionsRadios'.</msg>
+<msg timestamp="20230807 14:00:27.919" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230807 14:00:27.919" level="FAIL">No radio button with name 'optionsRadios' and value 'option2' found.</msg>
+<status status="FAIL" starttime="20230807 14:00:27.807" endtime="20230807 14:00:27.920"/>
+</kw>
+<status status="FAIL" starttime="20230807 14:00:27.807" endtime="20230807 14:00:27.920"/>
+</kw>
+<kw name="E seleciono um checkbox">
+<status status="NOT RUN" starttime="20230807 14:00:27.921" endtime="20230807 14:00:27.921"/>
+</kw>
+<status status="FAIL" starttime="20230807 14:00:27.807" endtime="20230807 14:00:27.921">No radio button with name 'optionsRadios' and value 'option2' found.</status>
+</test>
+<test id="s1-t3" name="Case 3 Teste de dropdown:" line="67">
+<kw name="E clico no dropdown">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${dropdwon}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230807 14:00:27.924" level="INFO">Clicking element '//select[@class="custom-select"]'.</msg>
+<msg timestamp="20230807 14:00:28.030" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230807 14:00:28.030" level="FAIL">Element with locator '//select[@class="custom-select"]' not found.</msg>
+<status status="FAIL" starttime="20230807 14:00:27.923" endtime="20230807 14:00:28.032"/>
+</kw>
+<status status="FAIL" starttime="20230807 14:00:27.923" endtime="20230807 14:00:28.032"/>
+</kw>
+<kw name="E clico em uma opcao">
+<status status="NOT RUN" starttime="20230807 14:00:28.033" endtime="20230807 14:00:28.033"/>
+</kw>
+<status status="FAIL" starttime="20230807 14:00:27.923" endtime="20230807 14:00:28.033">Element with locator '//select[@class="custom-select"]' not found.</status>
+</test>
+<status status="FAIL" starttime="20230807 14:00:25.220" endtime="20230807 14:00:28.034"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="3" skip="0" id="s1" name="T1">T1</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230807 14:00:25.526" level="ERROR">Error in file 'C:\Users\nafs2\Documents\Git\cursos_de_programacao\Robot\SuiteTs\t1.robot' on line 3: Resource file '..\5-checkboxRadio.robot' does not exist.</msg>
+</errors>
+</robot>
